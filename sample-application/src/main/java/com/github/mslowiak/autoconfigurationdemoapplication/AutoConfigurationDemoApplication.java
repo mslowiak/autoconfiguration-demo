@@ -1,7 +1,7 @@
 package com.github.mslowiak.autoconfigurationdemoapplication;
 
+import com.github.mslowiak.autoconfigure.error.ErrorAutoConfigurationCustomizer;
 import error.api.BusinessException;
-import error.configuration.ErrorHandlerConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,8 +17,8 @@ public class AutoConfigurationDemoApplication {
     }
 
     @Bean
-    ErrorHandlerConfiguration errorHandlerConfiguration() {
-        return new ErrorHandlerConfiguration("X-Problem-Category", 422);
+    public ErrorAutoConfigurationCustomizer errorAutoConfigurationCustomizer() {
+        return configuration -> configuration.setHeaderName("X-ChatGpt-Header");
     }
 
     @RestController
