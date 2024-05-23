@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.github.mslowiak'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api project(':error-library')
+    api project(':autoconfiguration:error-autoconfigure')
+}

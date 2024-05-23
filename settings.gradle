@@ -2,4 +2,5 @@ rootProject.name = 'error-autoconfiguration-demo'
 
 include 'sample-application'
 include 'error-library'
-
+include 'autoconfiguration:error-autoconfigure'
+include 'autoconfiguration:error-starter'
