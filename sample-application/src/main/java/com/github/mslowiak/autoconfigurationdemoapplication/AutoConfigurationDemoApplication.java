@@ -1,5 +1,6 @@
 package com.github.mslowiak.autoconfigurationdemoapplication;
 
+import com.github.mslowiak.autoconfigure.error.ErrorAutoConfiguration;
 import com.github.mslowiak.autoconfigure.error.ErrorAutoConfigurationCustomizer;
 import error.api.BusinessException;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
+@SpringBootApplication//(exclude = ErrorAutoConfiguration.class)
 public class AutoConfigurationDemoApplication {
 
     public static void main(String[] args) {
