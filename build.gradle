@@ -1,0 +1,14 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.github.mslowiak'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '21'
+}
+
+repositories {
+	mavenCentral()
+}

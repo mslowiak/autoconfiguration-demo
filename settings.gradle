@@ -1,0 +1,5 @@
+rootProject.name = 'error-autoconfiguration-demo'
+
+include 'sample-application'
+include 'error-library'
+
